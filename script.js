@@ -28,3 +28,4 @@ Insert.insertAdjacentText("afterend", x);
 button2.addEventListener("click", ret);
 function ret(ev) {
   if (ev) window.open("../index.html", "_self");
+}
