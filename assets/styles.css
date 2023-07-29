@@ -1,0 +1,148 @@
+/* CSS Setup and Reset from https://www.joshwcomeau.com/css/custom-css-reset/*/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*mobile view*/
+.outer {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 50%);
+}
+
+.grid-row {
+  margin-left: 10px;
+  margin-right: 10px;
+  align-self: end;
+  padding: 10px;
+}
+
+.row-1 {
+  margin-bottom: 20px;
+}
+
+.row-2 {
+  margin-bottom: 20px;
+  color: black;
+  font-weight: 600;
+  font-size: 2.5em;
+  line-height: 1;
+}
+
+.row-4 {
+  align-self: end;
+  width: 100vw;
+  justify-self: center;
+  margin-bottom: 5vh;
+  margin-left: 5%;
+}
+
+.row-4 button {
+  display: block;
+  width: 90%;
+  height: 50px;
+  font-weight: 600;
+  color: white;
+  font-size: 0.9em;
+  border-radius: 8px;
+  background-color: #242541;
+}
+.row-4 button:hover {
+  background: linear-gradient(to right, #fe5278 0%, #ff683e 100%);
+}
+
+@media screen and (min-width: 550px) {
+  body {
+    display: flex;
+    justify-content: center;
+    background-color: #242541;
+  }
+
+  .outer {
+    padding-top: 200px;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border-radius: 25px;
+    position: relative;
+    top: 75px;
+  }
+
+  .row-4 {
+    width: 500px;
+    padding-top: 50px;
+  }
+
+  .row-1,
+  .row-2,
+  .row-3,
+  .row-4 {
+    align-self: flex-start;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
