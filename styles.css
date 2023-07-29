@@ -161,6 +161,10 @@ h6 {
   background: linear-gradient(to right, #fe5278 0%, #ff683e 100%);
 }
 
+.save {
+  display: none;
+}
+
 @media screen and (min-width: 550px) {
   .desktop {
     display: inline;
@@ -174,8 +178,10 @@ h6 {
     position: relative;
     top: 75px;
     grid-template-columns: 350px 350px;
+    grid-template-rows: 556px;
     background-color: white;
     border-radius: 25px;
+
     padding: 0 20px 0 10px;
   }
 
@@ -193,6 +199,17 @@ h6 {
   .lower-half {
     grid-row: 1;
     grid-column: 1/2;
+  }
+  .row-1 {
+    margin-bottom: 0;
+    margin-top: 45px;
+  }
+
+  .row-2,
+  .row-3,
+  .row-4 {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   body {
